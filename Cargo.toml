@@ -1,0 +1,22 @@
+[package]
+name = "alexa-auth"
+version = "0.1.0"
+authors = ["Michael Böckling <michael.boeckling@codecentric.de>"]
+
+[dependencies]
+rocket = "0.3.6"
+rocket_codegen = "0.3.6"
+url = "*"
+hyper = "0.10.13"
+reqwest = "0.8.5"
+serde = "*"
+serde_json = "*"
+serde_derive = "*"
+
+[dependencies.rocket_contrib]
+version = "0.3.6"
+default-features = false
+features = ["handlebars_templates"]
+
+[target.x86_64-unknown-linux-musl]
+linker = "x86_64-linux-musl-gcc"
